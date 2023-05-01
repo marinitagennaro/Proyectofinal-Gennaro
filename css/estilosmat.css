@@ -1,0 +1,363 @@
+.grid-layout {
+  width: 90%;
+  height: 900px;
+  margin: 10px;
+  padding: 10px;
+  font-style: italic;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+  .grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-areas: "titulo" "pregunta" "explicacion" "materiales" "procedimiento" "imagenes" "footer";
+  }
+  .titulo {
+    grid-template-columns: 100%;
+    grid-template-areas: titulo;
+  }
+  .pregunta {
+    grid-template-columns: 100%;
+    grid-template-areas: pregunta;
+  }
+  .explicacion {
+    grid-template-columns: 100%;
+    grid-template-areas: explicacion;
+  }
+  .materiales {
+    grid-template-columns: 100%;
+    grid-template-areas: materiales;
+  }
+  .procedimiento {
+    grid-template-columns: 100%;
+    grid-template-areas: procedimiento;
+  }
+  .imagenes {
+    grid-template-columns: 100%;
+    grid-template-areas: imagenes;
+  }
+  .img {
+    display: none;
+  }
+  .tw, .face, .insta, .contacto {
+    display: none;
+  }
+  .telegram {
+    grid-template-areas: auto;
+  }
+}
+img {
+  width: 80px;
+  height: 80px;
+  margin-left: 3%;
+  cursor: pointer;
+  display: block;
+  border-radius: 35%;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0);
+}
+
+body {
+  background-color: rgb(247, 247, 212);
+  color: grey;
+  overflow-x: hidden;
+}
+
+.conteiner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  width: 80%;
+  margin: 15px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: rgba(214, 30, 61, 0.651);
+  position: absolute;
+  left: 0%;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+  width: 100%;
+}
+
+.footermat {
+  font-size: 16px;
+  background-color: rgb(238, 192, 192);
+  color: #c7265e;
+  border: solid 2px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.conteiner-materiales {
+  width: 97%;
+  height: 120vh;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(252, 246, 246);
+  position: relative;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-size: 28px;
+}
+
+ul {
+  font-style: "Roboto";
+  font-size: 20px;
+}
+
+.page-link {
+  color: rgb(98, 143, 143);
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  background-color: azure;
+}
+
+.btn {
+  background-color: grey;
+  animation-name: elBotonAnimado;
+  animation-duration: 5s;
+  position: relative;
+  color: rgb(240, 222, 120);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes elBotonAnimado {
+  0% {
+    background: gray;
+    left: 0px;
+  }
+  25% {
+    background: #c7265e;
+    left: 30px;
+  }
+  50% {
+    background: #b18896;
+    left: 30px;
+  }
+  75% {
+    background: #c49daa;
+    left: 0px;
+  }
+  100% {
+    background: #af2454;
+    left: 0px;
+  }
+}
+img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 70px;
+  height: 70px;
+  display: block;
+  border-radius: 35%;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0);
+}
+
+.titulo {
+  background-color: rgb(238, 192, 192);
+  color: #c7265e;
+  font-family: "Dancing Script", cursive, "Roboto", sans-serif, helvetica;
+  font-size: 28px;
+  margin: auto;
+  text-align: center;
+  grid-column: 2/5;
+  grid-row: 1/2;
+  grid-template-areas: titulo;
+}
+
+.insta {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-left: 150px;
+}
+
+.face {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-left: 150px;
+}
+
+.tw {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-left: 150px;
+}
+
+.telegram {
+  padding-left: 150px;
+}
+
+.pregunta {
+  color: rgb(119, 119, 117);
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+
+.explicacion {
+  grid-column: 2/5;
+  grid-row: 4/6;
+}
+
+a {
+  color: rgb(98, 143, 143);
+  text-decoration: none;
+}
+
+.materiales {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.procedimiento {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.imagenes {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.contacto {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  margin-top: 0px;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  width: 100%;
+}
+
+.conteiner-fluid img {
+  margin-top: 40px;
+  width: 70px;
+  height: 70px;
+  margin-left: 50px;
+}
+
+.h1 {
+  margin-top: 50%;
+}
+
+.espacio p {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #c7265e;
+  background-color: #b397a1;
+}
+
+@media only screen and (max-width: 480px) {
+  .espacio p {
+    color: azure;
+    background-color: black;
+  }
+}
+.conteinerprocedimiento {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  height: 200%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10% 95% 25%;
+  grid-template-areas: "p p p p p" "pasouno pasodos pasotres pasocuatro pasocinco" "a a a a a";
+}
+
+.pasouno {
+  grid-template-areas: pasouno;
+}
+
+.pasodos {
+  grid-template-areas: pasodos;
+}
+
+.pasotres {
+  grid-template-areas: pasotres;
+}
+
+.pasocuatro {
+  grid-template-areas: pasocuatro;
+}
+
+.pasocinco {
+  grid-template-areas: pasocinco;
+}
+
+.a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  background-color: azure;
+  grid-template-areas: a;
+}
+
+@media only screen and (max-width: 420px) and (max-width: 750px) {
+  .conteinerprocedimiento {
+    font-size: 15px;
+    grid-gap: 4px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "p" "pasouno" "pasodos" "pasotres" "pasocuatro" "pasocinco" "a";
+  }
+}
+#carouselExampleDark {
+  width: 70%;
+  height: 80%;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+/*# sourceMappingURL=estilosmat.css.map */
