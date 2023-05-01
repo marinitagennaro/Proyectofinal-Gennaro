@@ -16,12 +16,11 @@ $size-letra-titulos: 28px;
 .grid-layout
 {	
 	width: 90%;
-	height: 900px;
+	height: 1100px;
 	margin: 10px;
 	padding: 10px;
 	font-style: italic;
 	font-size: 18px;
-	
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: auto auto auto auto auto auto auto;
@@ -75,6 +74,13 @@ $size-letra-titulos: 28px;
 	}
 	.telegram{
 		grid-template-areas: auto;
+	}
+	//*** VISTA MOVIL DEL SECTOR DE CONTACTO ***//
+
+	.conteiner-fluid
+	{
+		width: 350px;
+		margin: 10px;
 	}
 }
 
@@ -153,10 +159,9 @@ body
 .conteiner-materiales
 {
     width: 97%;
-    height: 120vh;
+    height: 150vh;
     margin: 10px;
     padding: 10px;
-    background-color: $color-fondo-segundo;
     position: relative;
     padding-bottom: 3em;
     display: flex;
@@ -304,11 +309,14 @@ footer
 	height: 70px;
 	margin-left: 50px;
 }
+
 .h1
 {
 	margin-top: 50%;
 }
+
 //*** SECTOR DE PROCEDIMIENTO ***//
+
 .espacio p
 {
 	font-size: 30px;
@@ -317,6 +325,9 @@ footer
 	color: #c7265e;
 	background-color: #b397a1;
 }
+
+//*** MEDIA PARA PROCEDIMIENTO ***//
+
 @media only screen and (max-width: 480px) 
 {
 	.espacio p
@@ -324,7 +335,6 @@ footer
 		color: azure;
 		background-color: black;
 	}
-	
 }
 .conteinerprocedimiento
 {

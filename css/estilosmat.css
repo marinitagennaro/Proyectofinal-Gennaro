@@ -1,6 +1,6 @@
 .grid-layout {
   width: 90%;
-  height: 900px;
+  height: 1100px;
   margin: 10px;
   padding: 10px;
   font-style: italic;
@@ -50,6 +50,10 @@
   }
   .telegram {
     grid-template-areas: auto;
+  }
+  .conteiner-fluid {
+    width: 350px;
+    margin: 10px;
   }
 }
 img {
@@ -126,10 +130,9 @@ body {
 
 .conteiner-materiales {
   width: 97%;
-  height: 120vh;
+  height: 150vh;
   margin: 10px;
   padding: 10px;
-  background-color: rgb(252, 246, 246);
   position: relative;
   padding-bottom: 3em;
   display: flex;
